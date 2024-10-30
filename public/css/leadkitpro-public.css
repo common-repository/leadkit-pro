@@ -1,0 +1,35 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+#lkpr_pub_page_id {
+    margin: 0;
+    padding: 0;
+	overflow: hidden;
+}
+#lkpr-iframe-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+}
+#lkpr-iframe-container iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@supports not (-webkit-overflow-scrolling: touch) {
+    #lkpr-iframe-container {
+        overflow: visible;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    #lkpr-iframe-container {
+        overflow: visible;
+    }
+}
